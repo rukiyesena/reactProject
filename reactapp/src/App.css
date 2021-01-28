@@ -1,0 +1,287 @@
+/*$left-space: 180px;
+$border-light: rgba(#ffffff, 0.2);
+$primary: #209e91 !default;
+$hover: 24;
+
+@mixin buttonColor($color, $borderColor) {
+  @include styleButton($color, $borderColor);
+
+  &.disabled, &[disabled], fieldset[disabled] &, &.disabled:hover, &[disabled]:hover,
+  fieldset[disabled] &:hover, &.disabled:focus, &[disabled]:focus, fieldset[disabled] &:focus,
+  &.disabled.focus, &[disabled].focus, fieldset[disabled] &.focus, &.disabled:active,
+  &[disabled]:active, fieldset[disabled] &:active, &.disabled.active, &[disabled].active,
+  fieldset[disabled] &.active {
+    @include styleButton($color, $borderColor + $hover/2);
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &:hover, &:focus, &.focus, &:active, &.active {
+    @include styleButton($color, $borderColor - $hover);
+  }
+}
+@mixin styleButton($color, $borderColor) {
+  background: $color;
+  border-color: $borderColor;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  background: url("./images/blur-bg.jpg") ;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.notfound{
+  text-align: center;
+  margin-top: 120px;
+}
+
+.table-dark{
+  background-color: #343a404a;
+}
+
+.sidebar {
+  width: 180px;
+  top: 66px;
+  left: 0;
+  z-index: 904;
+  display: block;
+  min-height: 100%;
+  background-color: rgba(0,0,0,.5);
+  height: 100%;
+  position: fixed;
+}
+
+.page-top {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  z-index: 904;
+  box-shadow: 2px 0 3px rgba(0,0,0,0.5);
+  height: 66px;
+  width: 100%;
+  min-width: 320px;
+  padding: 0 32px 0 40px;
+}
+
+.main {
+  margin-left: 180px;
+  margin-right: 0;
+  padding: 66px 0 34px;
+  min-height: 500px;
+}
+
+.al-main {
+  margin-left: $left-space;
+  padding: 66px 0 34px 0;
+  min-height: 500px;
+}
+
+.main h3{
+  color: #ffffff;
+  text-align: left;
+}
+
+.sidebar-list {
+  margin: 0;
+  padding: 18px 0 0;
+  list-style: none;
+}
+
+.sidebar-list-item {
+  display: block;
+  position: relative;
+  float: none;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebar-list-link {
+  display: block;
+  height: 42px;
+  padding-left: 18px;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 42px;
+  cursor: pointer;
+  color: #fff;
+  overflow: hidden;
+  text-shadow: none;
+  white-space: nowrap;
+}
+
+.sidebar-list-item :hover{
+  color: #209e91;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.sidebar-list-link i {
+  margin-right: 18px;
+  width: 16px;
+  display: inline-block;
+}
+
+.logo span {
+  color: #209e91;
+}
+
+.logo {
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  font-family: Roboto,sans-serif;
+  white-space: nowrap;
+  float: left;
+  line-height: 60px;
+  padding: 0;
+}
+
+.navbar{
+  padding: 0;
+}
+
+.panel-body{
+  background: url("./images/blur-bg-blurred.jpg") fixed;
+  -webkit-transition: none;
+  transition: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.25);
+  padding: 15px 22px;
+  text-align: left;
+  color: #ffffff;
+  
+}
+
+.form-control {
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.15);
+  box-shadow: none;
+}
+
+.form-control[readonly] {
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.15);
+  box-shadow: none;
+}
+
+.form-control:disabled {
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.15);
+  box-shadow: none;
+}
+
+.form-control::-webkit-input-placeholder { color: #ced6d3; }  
+.form-control:-moz-placeholder { color: #ced6d3; }
+.form-control::-moz-placeholder { color: #ced6d3; }  
+.form-control:-ms-input-placeholder { color: #ced6d3; } 
+.form-control::-ms-input-placeholder { color: #ced6d3; } 
+
+.input-group-text{
+  background-color: #ffc107;
+  border: 1px solid #ffc107;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.fa-plus{
+  margin-right: 18px;
+}
+
+.fa-save{
+  margin-right: 18px;
+}
+
+.back-icon{
+  color: #ffffff;
+  text-align: right;
+}
+
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+.table-hover {
+  > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.editable-table-button {
+  width: 70px;
+}
+
+.btn.btn-primary {
+  @include buttonColor($primary, $primary);
+
+}
+.btn-with-icon {
+  i {
+    margin-right: 10px;
+  }
+}
+*/

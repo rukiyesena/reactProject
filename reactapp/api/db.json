@@ -1,0 +1,110 @@
+{
+  "client": [
+    {
+      "name": "Ahmet",
+      "surname": "Kanyon",
+      "email": "info@ahmetkanyon.com",
+      "phone": "05365360536",
+      "address": "Çaybaşı cad. Değirmenönü mah. No:3 Kat:4 Daire:7 DENİZLİ",
+      "taxnr": "1234567890",
+      "inventory": "Office 2013",
+      "licence": "",
+      "licencedate": "",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Ömer",
+      "surname": "Abalı",
+      "email": "info@omerabali.com",
+      "phone": "05365302536",
+      "address": "İstiklal cad. 1184 sk. No:3 Kat:4 Daire:7 DENİZLİ",
+      "taxnr": "1234567899",
+      "licence": "",
+      "licencedate": "",
+      "inventory": "Office 2017"
+    }
+  ],
+  "personnel": [
+    {
+      "name": "Mehmet",
+      "surname": "Kara",
+      "email": "mehmetkara@hotmail.com",
+      "phone": "05055050505",
+      "password": "12345",
+      "identitynr": "55487612456",
+      "place": "Bizde",
+      "client": "",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Ali",
+      "surname": "Binici",
+      "email": "alibinici@gmail.com",
+      "password": "54321",
+      "phone": "05055055545",
+      "identitynr": "23484712150",
+      "place": "Bizde",
+      "client": ""
+    }
+  ],
+  "inventory": [
+    {
+      "marka": "Microsoft",
+      "model": "Office Programı",
+      "code": "MO-2013",
+      "name": "Office 2013",
+      "licence": "1546-ds78-wwas-d75a-s1da",
+      "licencedate": "01.01.2020",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "marka": "Microsoft",
+      "model": "Office Programı",
+      "code": "MO-2017",
+      "name": "Office 2017",
+      "licence": "ad46-ds78-79as-sd5a-s68a",
+      "licencedate": "01.01.2020"
+    }
+  ],
+  "chart": [
+    {
+      "country": "Lithuania",
+      "litres": 501.9
+    },
+    {
+      "country": "Czech Republic",
+      "litres": 301.9
+    },
+    {
+      "country": "Ireland",
+      "litres": 201.1
+    },
+    {
+      "country": "Germany",
+      "litres": 165.8
+    },
+    {
+      "country": "Australia",
+      "litres": 139.9
+    },
+    {
+      "country": "Austria",
+      "litres": 128.3
+    },
+    {
+      "country": "UK",
+      "litres": 99
+    },
+    {
+      "country": "Belgium",
+      "litres": 60
+    },
+    {
+      "country": "The Netherlands",
+      "litres": 50
+    }
+  ]
+}
